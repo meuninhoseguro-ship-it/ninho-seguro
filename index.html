@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ninho Seguro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#fff7f8;
+color:#2b2b2b;
+overflow-x:hidden;
+}
+
+header{
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:fixed;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#d96c8a;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d96c8a;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:140px 8% 80px;
+gap:50px;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:64px;
+line-height:1.1;
+margin-bottom:25px;
+color:#d96c8a;
+}
+
+.hero-text p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:35px;
+color:#555;
+}
+
+.hero-text button{
+padding:18px 35px;
+border:none;
+border-radius:40px;
+background:#d96c8a;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-text button:hover{
+transform:translateY(-3px);
+background:#c45877;
+}
+
+.hero-image{
+width:450px;
+height:450px;
+background:linear-gradient(135deg,#ffd9e3,#ffeef2);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:120px;
+}
+
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:25px;
+color:#d96c8a;
+text-align:center;
+}
+
+.section-text{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:20px;
+line-height:1.8;
+color:#555;
+}
+
+.cards{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:20px;
+color:#d96c8a;
+}
+
+.card p{
+line-height:1.7;
+color:#555;
+}
+
+.login-area{
+margin-top:70px;
+background:white;
+padding:50px;
+border-radius:30px;
+max-width:500px;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.login-area h2{
+text-align:center;
+margin-bottom:30px;
+color:#d96c8a;
+}
+
+.input-group{
+margin-bottom:20px;
+}
+
+.input-group input{
+width:100%;
+padding:18px;
+border-radius:15px;
+border:1px solid #ddd;
+font-size:16px;
+}
+
+.login-btn{
+width:100%;
+padding:18px;
+border:none;
+border-radius:15px;
+background:#d96c8a;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.dashboard{
+margin-top:80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.dashboard-card{
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.dashboard-card h3{
+margin-bottom:20px;
+color:#d96c8a;
+}
+
+.dashboard-card p{
+line-height:1.8;
+color:#555;
+}
+
+footer{
+padding:40px 8%;
+background:white;
+margin-top:100px;
+text-align:center;
+color:#666;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:48px;
+}
+
+.hero-image{
+width:320px;
+height:320px;
+font-size:90px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Ninho Seguro</div>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Sobre</a>
+<a href="#">Monitoramento</a>
+<a href="#">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Tecnologia e cuidado para quem mais importa.</h1>
+
+<p>
+O Ninho Seguro é uma plataforma inteligente de monitoramento materno-infantil criada para oferecer segurança, acolhimento e acompanhamento em tempo real para famílias.
+</p>
+
+<button>Entrar na Plataforma</button>
+
+</div>
+
+<div class="hero-image">
+👶
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Sobre a Plataforma</h2>
+
+<p class="section-text">
+Nossa plataforma une tecnologia moderna e cuidado humanizado para acompanhar o desenvolvimento do bebê de maneira segura, intuitiva e acolhedora.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Monitoramento Inteligente</h3>
+<p>
+Acompanhe sinais vitais, temperatura, frequência cardíaca e informações importantes em tempo real.
+</p>
+</div>
+
+<div class="card">
+<h3>Relatórios Modernos</h3>
+<p>
+Visualize gráficos inteligentes sobre sono, alimentação e desenvolvimento infantil.
+</p>
+</div>
+
+<div class="card">
+<h3>Segurança Digital</h3>
+<p>
+Sistema protegido com acesso seguro, privacidade de dados e organização intuitiva.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Área de Login</h2>
+
+<div class="login-area">
+
+<h2>Bem-vindo</h2>
+
+<div class="input-group">
+<input type="text" placeholder="Login">
+</div>
+
+<div class="input-group">
+<input type="password" placeholder="Senha">
+</div>
+
+<button class="login-btn">Entrar</button>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Painel Inteligente</h2>
+
+<div class="dashboard">
+
+<div class="dashboard-card">
+<h3>Monitoramento</h3>
+<p>
+Visualize temperatura corporal, frequência cardíaca, sono e acompanhamento diário.
+</p>
+</div>
+
+<div class="dashboard-card">
+<h3>Gráficos</h3>
+<p>
+Acompanhe a evolução do desenvolvimento infantil através de gráficos modernos e organizados.
+</p>
+</div>
+
+<div class="dashboard-card">
+<h3>Comunicação</h3>
+<p>
+Espaço dedicado para suporte, interação e acompanhamento seguro dentro da plataforma.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Ninho Seguro © 2026</p>
+<p>Tecnologia, acolhimento e segurança para famílias.</p>
+
+</footer>
+
+</body>
+</html>
